@@ -3,8 +3,23 @@
 Data model for the 2022 scouting database
 
 ## Git basics
-Team 195 Git repos are hosted in the frcteam195 account of GitHub. However, only mentors have access to edit code on the frcteam195 repositories. Others must create their own GitHub account and fork the appropriate repository  (scouting_datamodel_2022 in this example) from the frcteam195 GitHub account to their own GitHub account. Then on your laptop you clone the appropriate repository from your OWN GitHub account to your lpatop. This will create a local repository on your laptop and at this point there are three repositories 1. the "upstream master" or "upstream main" (GitHub is moving away from the master term and replacin it with main) on the frcteam195 GitHub account, 2. the "origin" on your own GitHub account, and 3. the local repository on your laptop. As you edit code on your laptop you will "add" and "commit" changes to your local repository on your laptop and then "push" those changes to the "origin" on your GitHub account. From your GitHub account (website) you can then create a pull request which a mentor will evaluate and then accept into the upstream master on the frcteam195 repository. Everyone can then do a pull from the upstream master so they have the latest code on their local repository on their laptop.
-Very important - it is important to pull from the upstream master before working so that you do not edit code that someone else has already edited. This will cause conflicts that we will need to resolve. We will also try and assign different people to edit different files to avoid conflicts.
+Team 195 Git repos are hosted in the frcteam195 account of GitHub. However, only mentors have 
+access to edit code on the frcteam195 repositories. Others must create their own GitHub account 
+and fork the appropriate repository  (scouting_datamodel_2022 in this example) from the frcteam195 
+GitHub account to their own GitHub account. Then on your laptop you clone the appropriate repository 
+from your OWN GitHub account to your lpatop. This will create a local repository on your laptop and 
+at this point there are three repositories 1. the "upstream master" or "upstream main" (GitHub is 
+moving away from the master term and replacin it with main) on the frcteam195 GitHub account, 2. the 
+"origin" on your own GitHub account, and 3. the local repository on your laptop. As you edit code on 
+your laptop you will "add" and "commit" changes to your local repository on your laptop and then 
+"push" those changes to the "origin" on your GitHub account. From your GitHub account (website) you 
+can then create a pull request which a mentor will evaluate and then accept into the upstream master 
+on the frcteam195 repository. Everyone can then do a pull from the upstream master so they have the 
+latest code on their local repository on their laptop.
+
+Very important - it is important to pull from the upstream master before working so that you do not 
+edit code that someone else has already edited. This will cause conflicts that we will need to resolve. 
+We will also try and assign different people to edit different files to avoid conflicts.
 
 ## Linux subsystem for Windows
 If you are using Windows 10 the easiest way to interact with git is to install Ubuntu20.04. To do
@@ -46,7 +61,9 @@ message" 'filename'` (e.g. git commit -m "added helpful hints" README.md). Note 
 repo on GitHUB.
 
 After adding and commiting code changes to the local repository you may push your
-code changes to the GitHUB repo with the command `git push`. This will send the code to the origin repository on your own GitHub account. 
+code changes to the GitHUB repo with the command `git push`. This will send the code to the origin 
+repository on your own GitHub account. 
 
-Then from the GitHub website you will request a pull request so that a mentor can accept your code changes into the upstream master
+Then from the GitHub website you will request a pull request so that a mentor can accept your 
+code changes into the upstream master
 
