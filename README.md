@@ -1,15 +1,10 @@
-Test test2
-
 # scouting_datamodel_2022
 ## Description
 Data model for the 2022 scouting database
 
 ## Git basics
-Team 195 Git repos are hosted in the frcteam195 account of GitHUB.
-Once you clone a repo you have a local copy of that repo. 
-As you make changes you will need to add those changes, 
-committ them, and then finally push the changes to the frcteam195 GitHUB repo to
-be incorporated into the repo for others to pull from
+Team 195 Git repos are hosted in the frcteam195 account of GitHUB. However, only mentors have access to edit code on the frcteam195 repo. Others must create their own GitHub account and fork the scouting_datamodel_2022 from the frcteam195 GitHub account to their own GitHub account. Then on your laptop you clone the scouting_datamodel_2022 repository from your own GitHub account. As you edit code on your laptop you will "add" and "commit" changes to your local repository on your laptop and then "push" those changes to your GiotHub account. From your GitHub account you can then create a pull request which a mentor will evaluate and then accept into the frcteam195 repository.
+Very important - as you being to work on code again you want to be sure that you are starting from the latest code. You can do this by pulling from the upstream master to your laptop. Note that you should not pull from your GitHub repository, it should be from the upstream master.
 
 ## Linux subsystem for Windows
 If you are using Windows 10 the easiest way to interact with git is to install Ubuntu20.04. To do
