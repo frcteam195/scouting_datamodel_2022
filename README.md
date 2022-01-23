@@ -3,8 +3,8 @@
 Data model for the 2022 scouting database
 
 ## Git basics
-Team 195 Git repos are hosted in the frcteam195 account of GitHUB. However, only mentors have access to edit code on the frcteam195 repo. Others must create their own GitHub account and fork the scouting_datamodel_2022 from the frcteam195 GitHub account to their own GitHub account. Then on your laptop you clone the scouting_datamodel_2022 repository from your own GitHub account. As you edit code on your laptop you will "add" and "commit" changes to your local repository on your laptop and then "push" those changes to your GiotHub account. From your GitHub account you can then create a pull request which a mentor will evaluate and then accept into the frcteam195 repository.
-Very important - as you being to work on code again you want to be sure that you are starting from the latest code. You can do this by pulling from the upstream master to your laptop. Note that you should not pull from your GitHub repository, it should be from the upstream master.
+Team 195 Git repos are hosted in the frcteam195 account of GitHub. However, only mentors have access to edit code on the frcteam195 repositories. Others must create their own GitHub account and fork the appropriate repository  (scouting_datamodel_2022 in this example) from the frcteam195 GitHub account to their own GitHub account. Then on your laptop you clone the appropriate repository from your OWN GitHub account to your lpatop. This will create a local repository on your laptop and at this point there are three repositories 1. the "upstream master" or "upstream main" (GitHub is moving away from the master term and replacin it with main) on the frcteam195 GitHub account, 2. the "origin" on your own GitHub account, and 3. the local repository on your laptop. As you edit code on your laptop you will "add" and "commit" changes to your local repository on your laptop and then "push" those changes to the "origin" on your GitHub account. From your GitHub account (website) you can then create a pull request which a mentor will evaluate and then accept into the upstream master on the frcteam195 repository. Everyone can then do a pull from the upstream master so they have the latest code on their local repository on their laptop.
+Very important - it is important to pull from the upstream master before working so that you do not edit code that someone else has already edited. This will cause conflicts that we will need to resolve. We will also try and assign different people to edit different files to avoid conflicts.
 
 ## Linux subsystem for Windows
 If you are using Windows 10 the easiest way to interact with git is to install Ubuntu20.04. To do
@@ -17,6 +17,7 @@ Public repositories in the frcrteam195 GitHUB account can be viewed by everyone.
 autorized users can push code changes. All authorized users must also setup ssh keys on GitHUB
 in order to write files to the GitHUB repos.
 All users that need write access to frcteam195 should send a request to mark.maciejewski@gmail.com.
+
 ### Setting up ssh keys
 From a Linux terminal from the Linux subsystem from Windows or from a terminal window on a Mac 
 enter the command `ssh-keygen` and hit enter at the prompts. Note where the the ssh key will be
@@ -41,9 +42,11 @@ command `git add *` to add all new and changed files
 
 After adding new files you must commit them with the command `git commit -m "commit
 message" 'filename'` (e.g. git commit -m "added helpful hints" README.md). Note that 
-`git add` and `git commit` commands work on the local git repo and not on the 
+`git add` and `git commit` commands work on the local git repo and not on the origin
 repo on GitHUB.
 
 After adding and commiting code changes to the local repository you may push your
-code changes to the GitHUB repo with the command `git push`
+code changes to the GitHUB repo with the command `git push`. This will send the code to the origin repository on your own GitHub account. 
+
+Then from the GitHub website you will request a pull request so that a mentor can accept your code changes into the upstream master
 
