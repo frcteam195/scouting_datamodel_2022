@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`MatchScouting` (
 	`TeleBallMiss` INT DEFAULT 0,
 	`SummSortCargo` INT NULL,
 	`SummLaunchPad` INT NULL,
-	`ClimbStatus` INT DEFAULT 0,
+	`ClimbStatusID` INT DEFAULT 0,
 	`ClimbHeight` INT DEFAULT 0,
 	`ClimbPosition` INT DEFAULT 0,
 	`ClimbSummary` INT DEFAULT 0,
