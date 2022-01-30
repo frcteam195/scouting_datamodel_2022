@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`MatchScouting` (
 	`SummLaunchPad` INT NULL,
 	`ClimbStatusID` INT DEFAULT 0,
 	`ClimbHeight` INT DEFAULT 0,
-	`ClimbPosition` INT DEFAULT 0,
+	`ClimbPositionID` INT DEFAULT 0,
 	`ClimbSummary` INT DEFAULT 0,
 	`SummBrokeDown` INT DEFAULT 0,
 	`SummLostComm` INT DEFAULT 0,
