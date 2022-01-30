@@ -1,7 +1,7 @@
 # scouting_datamodel_2022
 ## Description
 Data model for the 2022 scouting database
-
+Harish is great!
 ## Git basics
 Team 195 Git repos are hosted in the frcteam195 account of GitHub. However, only mentors have 
 access to edit code on the frcteam195 repositories. Others must create their own GitHub account 
