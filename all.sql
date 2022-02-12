@@ -1,40 +1,28 @@
-/* 195 ORP Scaling */
+/* Adhoc Match Report */
 
-CREATE TABLE IF NOT EXISTS `team195_scouting`.`195OPR-Scaling` (
-	`XXXXXXXXID` INT AUTO_INCREMENT NOT NULL,
-	`XXXXXXXXX` VARCHAR(50) NULL,
-	PRIMARY KEY(`XXXXXXXXX`))
-Engine = InnoDB;/* 195 ORP Values */
-
-CREATE TABLE IF NOT EXISTS `team195_scouting`.`195OPR-Values` (
-	`XXXXXXXXID` INT AUTO_INCREMENT NOT NULL,
-	`XXXXXXXXX` VARCHAR(50) NULL,
-	PRIMARY KEY(`XXXXXXXXX`))
-Engine = InnoDB;/* Adhoc Match Report */
-
-CREATE TABLE IF NOT EXISTS AdHocMatchReport
-(
-	MatchID INT NOT NULL AUTO_INCREMENT, 
-	MatchNo VARCHAR(255) NULL,
-	RedTeam1 VARCHAR(10) NULL,
-	RedTeam2 VARCHAR(10) NULL, 
-	RedTeam3 VARCHAR(10) NULL,
-	BlueTeam1 VARCHAR(10) NULL, 
-	BlueTeam2 VARCHAR(10) NULL,
-	BlueTeam3 VARCHAR(10) NULL,
-	FuturePartnerMatch1Red VARCHAR(255) NULL,
-	FuturePartnerMatch2Red VARCHAR(255) NULL,
-	FuturePartnerMatch3Red VARCHAR(255) NULL, 
-	FuturePartnerMatch1Blue VARCHAR(255) NULL,
-	FuturePartnerMatch2Blue VARCHAR(255) NULL,
-	FuturePartnerMatch3Blue VARCHAR(255) NULL,
-	FutureOpponentMatch1Red VARCHAR(255) NULL, 
-	FutureOpponentMatch2Red VARCHAR(255) NULL,
-	FutureOpponentMatch3Red VARCHAR(255) NULL,
-	FutureOpponentMatch1Blue VARCHAR(255) NULL,
-	FutureOpponentMatch2Blue VARCHAR(255) NULL,
-	FutureOpponentMatch3Blue VARCHAR(255) NULL
-);/* AllianceStations */
+CREATE TABLE IF NOT EXISTS `team195_scouting`.`AdHocMatchReport` (
+	`MatchID` INT AUTO_INCREMENT NOT NULL, 
+	`MatchNo` VARCHAR(255) NULL,
+	`RedTeam1` VARCHAR(10) NULL,
+	`RedTeam2` VARCHAR(10) NULL, 
+	`RedTeam3` VARCHAR(10) NULL,
+	`BlueTeam1` VARCHAR(10) NULL, 
+	`BlueTeam2` VARCHAR(10) NULL,
+	`BlueTeam3` VARCHAR(10) NULL,
+	`FuturePartnerMatch1Red` VARCHAR(255) NULL,
+	`FuturePartnerMatch2Red` VARCHAR(255) NULL,
+	`FuturePartnerMatch3Red` VARCHAR(255) NULL, 
+	`FuturePartnerMatch1Blue` VARCHAR(255) NULL,
+	`FuturePartnerMatch2Blue` VARCHAR(255) NULL,
+	`FuturePartnerMatch3Blue` VARCHAR(255) NULL,
+	`FutureOpponentMatch1Red` VARCHAR(255) NULL, 
+	`FutureOpponentMatch2Red` VARCHAR(255) NULL,
+	`FutureOpponentMatch3Red` VARCHAR(255) NULL,
+	`FutureOpponentMatch1Blue` VARCHAR(255) NULL,
+	`FutureOpponentMatch2Blue` VARCHAR(255) NULL,
+	`FutureOpponentMatch3Blue` VARCHAR(255) NULL,
+	PRIMARY KEY(`MatchID`))
+Engine = InnoDB;/* AllianceStations */
 
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`AllianceStations` (
 	`AllianceStationID` INT NOT NULL,
@@ -46,8 +34,10 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`AnalysisTypes` (
 	`AnalysisTypeID` INT NOT NULL,
 	`AnalysisType` VARCHAR(20) NULL,
 	`SortOrder` INT NULL,
+	`Developer` VARCHAR(50) NULL,
 	PRIMARY KEY(`AnalysisTypeID`))
-Engine = InnoDB;/* Admin Tables BA - OPR */
+Engine = InnoDB;
+/* Admin Tables BA - OPR */
 
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`BlueAllianceOPR` (
 	`Team` VARCHAR(10) NULL,
@@ -80,13 +70,7 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`BlueAllianceTeams` (
 PRIMARY KEY(`Team`))
 Engine = InnoDB;/* Table of Matches */
 
-CREATE TABLE IF NOT EXISTS `team195_scouting`.`ClimbPositions` (
-	`ClimbPositionID` INT AUTO_INCREMENT NOT NULL,
-	`ClimbPosition` VARCHAR(50) NULL,
-	PRIMARY KEY(`ClimbPositionID`))
-Engine = InnoDB;/* Table of Matches */
-
-CREATE TABLE IF NOT EXISTS `team195_scouting`.`ClimbPositions` (
+CREATE TABLE IF NOT EXISTS `team195_scouting`.`ClimbStatus` (
 	`ClimbStatusID` INT AUTO_INCREMENT NOT NULL,
 	`ClimbStatus` VARCHAR(50) NULL,
 	PRIMARY KEY(`ClimbStatusID`))
@@ -126,6 +110,248 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`Computers` (
 Engine = InnoDB;/* Current Event Analysis */
 
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`CurrentEventAnalysis` (
+	`Team` VARCHAR(10) NULL,
+	`AnalysisTypeID` INT NULL,
+	`EventID` INT NULL,
+	`Match1Display` VARCHAR(10) NULL,
+	`Match1Format` INT NULL,
+	`Match1Value` FLOAT NULL,
+	`Match2Display` VARCHAR(10) NULL,
+	`Match2Format` INT NULL,
+	`Match2Value` FLOAT NULL,
+	`Match3Display` VARCHAR(10) NULL, 
+	`Match3Format` INT NULL,
+	`Match3Value` FLOAT NULL,
+	`Match4Display` VARCHAR(10) NULL, 
+	`Match4Format` INT NULL,
+	`Match4Value` FLOAT NULL,
+	`Match5Display` VARCHAR(10) NULL, 
+	`Match5Format` INT NULL,
+	`Match5Value` FLOAT NULL,
+	`Match6Display` VARCHAR(10) NULL, 
+	`Match6Format` INT NULL,
+	`Match6Value` FLOAT NULL,
+	`Match7Display` VARCHAR(10) NULL, 
+	`Match7Format` INT NULL,
+	`Match7Value` FLOAT NULL,
+	`Match8Display` VARCHAR(10) NULL, 
+	`Match8Format` INT NULL,
+	`Match8Value` FLOAT NULL,
+	`Match9Display` VARCHAR(10) NULL, 
+	`Match9Format` INT NULL,
+	`Match9Value` FLOAT NULL,
+	`Match10Display` VARCHAR(10) NULL, 
+	`Match10Format` INT NULL,
+	`Match10Value` FLOAT NULL,
+	`Match11Display` VARCHAR(10) NULL, 
+	`Match11Format` INT NULL,
+	`Match11Value` FLOAT NULL,
+	`Match12Display` VARCHAR(10) NULL, 
+	`Match12Format` INT NULL,
+	`Match12Value` FLOAT NULL,
+	`Summary1Display` VARCHAR(10) NULL, 
+	`Summary1Format` INT NULL,
+	`Summary1Value` FLOAT NULL,
+	`Summary2Display` VARCHAR(10) NULL, 
+	`Summary2Format` INT NULL,
+	`Summary2Value` FLOAT NULL,
+	`Summary3Display` VARCHAR(10) NULL, 
+	`Summary3Format` INT NULL,
+	`Summary3Value` FLOAT NULL,
+	`Summary4Display` VARCHAR(10) NULL, 
+	`Summary4Format` INT NULL,
+	`Summary4Value` FLOAT NULL,
+	`Minimum` FLOAT NULL,
+	`Maximum` FLOAT NULL,
+	`Percent` FLOAT NULL)
+Engine = InnoDB;/* Current Event Analysis */
+
+CREATE TABLE IF NOT EXISTS `team195_scouting`.`CurrentEventAnalysisGraphs` (
+	`Team` VARCHAR(10) NULL,
+	`AnalysisTypeID` INT NULL,
+	`EventID` INT NULL,
+	`TotalBalls` INT NULL,
+	`TotalScore` INT NULL,
+	`Climb` INT NULL,
+	`TeleHighBalls` INT NULL,
+	`TeleLowBalls` INT NULL,
+	`TeleTotalBalls` INT NULL,
+	`AutonomousScore` INT NULL,
+	`Percent` FLOAT NULL)
+Engine = InnoDB;/* Current Event Analysis */
+
+CREATE TABLE IF NOT EXISTS `team195_scouting`.`CurrentEventAnalysisHartford` (
+	`Team` VARCHAR(10) NULL,
+	`AnalysisTypeID` INT NULL,
+	`EventID` INT NULL,
+	`Match1Display` VARCHAR(10) NULL,
+	`Match1Format` INT NULL,
+	`Match1Value` FLOAT NULL,
+	`Match2Display` VARCHAR(10) NULL,
+	`Match2Format` INT NULL,
+	`Match2Value` FLOAT NULL,
+	`Match3Display` VARCHAR(10) NULL, 
+	`Match3Format` INT NULL,
+	`Match3Value` FLOAT NULL,
+	`Match4Display` VARCHAR(10) NULL, 
+	`Match4Format` INT NULL,
+	`Match4Value` FLOAT NULL,
+	`Match5Display` VARCHAR(10) NULL, 
+	`Match5Format` INT NULL,
+	`Match5Value` FLOAT NULL,
+	`Match6Display` VARCHAR(10) NULL, 
+	`Match6Format` INT NULL,
+	`Match6Value` FLOAT NULL,
+	`Match7Display` VARCHAR(10) NULL, 
+	`Match7Format` INT NULL,
+	`Match7Value` FLOAT NULL,
+	`Match8Display` VARCHAR(10) NULL, 
+	`Match8Format` INT NULL,
+	`Match8Value` FLOAT NULL,
+	`Match9Display` VARCHAR(10) NULL, 
+	`Match9Format` INT NULL,
+	`Match9Value` FLOAT NULL,
+	`Match10Display` VARCHAR(10) NULL, 
+	`Match10Format` INT NULL,
+	`Match10Value` FLOAT NULL,
+	`Match11Display` VARCHAR(10) NULL, 
+	`Match11Format` INT NULL,
+	`Match11Value` FLOAT NULL,
+	`Match12Display` VARCHAR(10) NULL, 
+	`Match12Format` INT NULL,
+	`Match12Value` FLOAT NULL,
+	`Summary1Display` VARCHAR(10) NULL, 
+	`Summary1Format` INT NULL,
+	`Summary1Value` FLOAT NULL,
+	`Summary2Display` VARCHAR(10) NULL, 
+	`Summary2Format` INT NULL,
+	`Summary2Value` FLOAT NULL,
+	`Summary3Display` VARCHAR(10) NULL, 
+	`Summary3Format` INT NULL,
+	`Summary3Value` FLOAT NULL,
+	`Summary4Display` VARCHAR(10) NULL, 
+	`Summary4Format` INT NULL,
+	`Summary4Value` FLOAT NULL,
+	`Minimum` FLOAT NULL,
+	`Maximum` FLOAT NULL,
+	`Percent` FLOAT NULL)
+Engine = InnoDB;/* Current Event Analysis */
+
+CREATE TABLE IF NOT EXISTS `team195_scouting`.`CurrentEventAnalysisHouston` (
+	`Team` VARCHAR(10) NULL,
+	`AnalysisTypeID` INT NULL,
+	`EventID` INT NULL,
+	`Match1Display` VARCHAR(10) NULL,
+	`Match1Format` INT NULL,
+	`Match1Value` FLOAT NULL,
+	`Match2Display` VARCHAR(10) NULL,
+	`Match2Format` INT NULL,
+	`Match2Value` FLOAT NULL,
+	`Match3Display` VARCHAR(10) NULL, 
+	`Match3Format` INT NULL,
+	`Match3Value` FLOAT NULL,
+	`Match4Display` VARCHAR(10) NULL, 
+	`Match4Format` INT NULL,
+	`Match4Value` FLOAT NULL,
+	`Match5Display` VARCHAR(10) NULL, 
+	`Match5Format` INT NULL,
+	`Match5Value` FLOAT NULL,
+	`Match6Display` VARCHAR(10) NULL, 
+	`Match6Format` INT NULL,
+	`Match6Value` FLOAT NULL,
+	`Match7Display` VARCHAR(10) NULL, 
+	`Match7Format` INT NULL,
+	`Match7Value` FLOAT NULL,
+	`Match8Display` VARCHAR(10) NULL, 
+	`Match8Format` INT NULL,
+	`Match8Value` FLOAT NULL,
+	`Match9Display` VARCHAR(10) NULL, 
+	`Match9Format` INT NULL,
+	`Match9Value` FLOAT NULL,
+	`Match10Display` VARCHAR(10) NULL, 
+	`Match10Format` INT NULL,
+	`Match10Value` FLOAT NULL,
+	`Match11Display` VARCHAR(10) NULL, 
+	`Match11Format` INT NULL,
+	`Match11Value` FLOAT NULL,
+	`Match12Display` VARCHAR(10) NULL, 
+	`Match12Format` INT NULL,
+	`Match12Value` FLOAT NULL,
+	`Summary1Display` VARCHAR(10) NULL, 
+	`Summary1Format` INT NULL,
+	`Summary1Value` FLOAT NULL,
+	`Summary2Display` VARCHAR(10) NULL, 
+	`Summary2Format` INT NULL,
+	`Summary2Value` FLOAT NULL,
+	`Summary3Display` VARCHAR(10) NULL, 
+	`Summary3Format` INT NULL,
+	`Summary3Value` FLOAT NULL,
+	`Summary4Display` VARCHAR(10) NULL, 
+	`Summary4Format` INT NULL,
+	`Summary4Value` FLOAT NULL,
+	`Minimum` FLOAT NULL,
+	`Maximum` FLOAT NULL,
+	`Percent` FLOAT NULL)
+Engine = InnoDB;/* Current Event Analysis */
+
+CREATE TABLE IF NOT EXISTS `team195_scouting`.`CurrentEventAnalysisNEC` (
+	`Team` VARCHAR(10) NULL,
+	`AnalysisTypeID` INT NULL,
+	`EventID` INT NULL,
+	`Match1Display` VARCHAR(10) NULL,
+	`Match1Format` INT NULL,
+	`Match1Value` FLOAT NULL,
+	`Match2Display` VARCHAR(10) NULL,
+	`Match2Format` INT NULL,
+	`Match2Value` FLOAT NULL,
+	`Match3Display` VARCHAR(10) NULL, 
+	`Match3Format` INT NULL,
+	`Match3Value` FLOAT NULL,
+	`Match4Display` VARCHAR(10) NULL, 
+	`Match4Format` INT NULL,
+	`Match4Value` FLOAT NULL,
+	`Match5Display` VARCHAR(10) NULL, 
+	`Match5Format` INT NULL,
+	`Match5Value` FLOAT NULL,
+	`Match6Display` VARCHAR(10) NULL, 
+	`Match6Format` INT NULL,
+	`Match6Value` FLOAT NULL,
+	`Match7Display` VARCHAR(10) NULL, 
+	`Match7Format` INT NULL,
+	`Match7Value` FLOAT NULL,
+	`Match8Display` VARCHAR(10) NULL, 
+	`Match8Format` INT NULL,
+	`Match8Value` FLOAT NULL,
+	`Match9Display` VARCHAR(10) NULL, 
+	`Match9Format` INT NULL,
+	`Match9Value` FLOAT NULL,
+	`Match10Display` VARCHAR(10) NULL, 
+	`Match10Format` INT NULL,
+	`Match10Value` FLOAT NULL,
+	`Match11Display` VARCHAR(10) NULL, 
+	`Match11Format` INT NULL,
+	`Match11Value` FLOAT NULL,
+	`Match12Display` VARCHAR(10) NULL, 
+	`Match12Format` INT NULL,
+	`Match12Value` FLOAT NULL,
+	`Summary1Display` VARCHAR(10) NULL, 
+	`Summary1Format` INT NULL,
+	`Summary1Value` FLOAT NULL,
+	`Summary2Display` VARCHAR(10) NULL, 
+	`Summary2Format` INT NULL,
+	`Summary2Value` FLOAT NULL,
+	`Summary3Display` VARCHAR(10) NULL, 
+	`Summary3Format` INT NULL,
+	`Summary3Value` FLOAT NULL,
+	`Summary4Display` VARCHAR(10) NULL, 
+	`Summary4Format` INT NULL,
+	`Summary4Value` FLOAT NULL,
+	`Minimum` FLOAT NULL,
+	`Maximum` FLOAT NULL,
+	`Percent` FLOAT NULL)
+Engine = InnoDB;/* Current Event Analysis */
+
+CREATE TABLE IF NOT EXISTS `team195_scouting`.`CurrentEventAnalysisWNE` (
 	`Team` VARCHAR(10) NULL,
 	`AnalysisTypeID` INT NULL,
 	`EventID` INT NULL,
@@ -322,22 +548,6 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`Events` (
 	PRIMARY KEY(`EventID`))
 Engine = InnoDB;/* Match Scouting Level 1 */
 
-/* 
-   For status items defined as INT's 
-   0 = not entered (default)
-   1 = false
-   2 = true 
-*/
-   
-/*
-   Table was originally created with ScouterID and ComputerID as being NOT NULL
-   Table was edited live with the following commands and the CREATE TABLE below 
-   edited so in the future it will be created properly
-ALTER TABLE `team195_scouting`.`MatchScouting` 
-CHANGE COLUMN `ComputerID` `ComputerID` INT(11) NULL ,
-CHANGE COLUMN `ScouterID` `ScouterID` INT(11) NULL ;
-*/
-
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`MatchScouting` (
 	`MatchScoutingID` INT AUTO_INCREMENT NOT NULL,
 	`EventID` INT NOT NULL,
@@ -369,21 +579,22 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`MatchScouting` (
 	`TeleBallLow` INT DEFAULT 0,
 	`TeleBallHigh` INT DEFAULT 0,
 	`TeleBallMiss` INT DEFAULT 0,
-	`SummSortCargo` INT NULL,
+	`ClimbStatusID` INT NULL,
+	`ClimbHeight` INT NULL,
+	`ClimbPosition` INT NULL,
 	`SummLaunchPad` INT NULL,
-	`ClimbStatusID` INT DEFAULT 0,
-	`ClimbHeight` INT DEFAULT 0,
-	`ClimbPositionID` INT DEFAULT 0,
-	`ClimbSummary` INT DEFAULT 0,
-	`SummBrokeDown` INT DEFAULT 0,
-	`SummLostComm` INT DEFAULT 0,
-	`SummSubSystemBroke` INT DEFAULT 0,
-	`SummGroundPickup` INT DEFAULT 0,
-	`SummTerminalPickup` INT DEFAULT 0,
-	`SummPlayedDefense` INT DEFAULT 0,
-	`SummDefPlayedAgainst` INT DEFAULT 0,
+	`SummSortCargo` INT NULL,
+	`SummShootDriving` INT NULL,
+	`SummBrokeDown` INT NULL,
+	`SummLostComm` INT NULL,
+	`SummSubSystemBroke` INT NULL,
+	`SummGroundPickup` INT NULL,
+	`SummTerminalPickup` INT NULL,
+	`SummPlayedDefense` INT NULL,
+	`SummDefPlayedAgainst` INT NULL,
 	PRIMARY KEY(`MatchScoutingID`))
-ENGINE = InnoDB;/* Table of Matches */
+ENGINE = InnoDB;
+/* Table of Matches */
 
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`Matches` (
 	`MatchID` INT AUTO_INCREMENT NOT NULL,

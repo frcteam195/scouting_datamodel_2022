@@ -1,21 +1,5 @@
 /* Match Scouting Level 1 */
 
-/* 
-   For status items defined as INT's 
-   0 = not entered (default)
-   1 = false
-   2 = true 
-*/
-   
-/*
-   Table was originally created with ScouterID and ComputerID as being NOT NULL
-   Table was edited live with the following commands and the CREATE TABLE below 
-   edited so in the future it will be created properly
-ALTER TABLE `team195_scouting`.`MatchScouting` 
-CHANGE COLUMN `ComputerID` `ComputerID` INT(11) NULL ,
-CHANGE COLUMN `ScouterID` `ScouterID` INT(11) NULL ;
-*/
-
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`MatchScouting` (
 	`MatchScoutingID` INT AUTO_INCREMENT NOT NULL,
 	`EventID` INT NOT NULL,
