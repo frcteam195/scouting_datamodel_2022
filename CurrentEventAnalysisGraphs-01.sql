@@ -3,6 +3,7 @@
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`CurrentEventAnalysisGraphs` (
 	`Team` VARCHAR(10) NULL,
 	`EventID` INT NULL,
+	`Autonomous` INT NULL,
 	`TotalBalls` INT NULL,
 	`TotalScore` INT NULL,
 	`Climb` INT NULL,
@@ -10,5 +11,5 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`CurrentEventAnalysisGraphs` (
 	`TeleLowBalls` INT NULL,
 	`TeleTotalBalls` INT NULL,
 	`AutonomousScore` INT NULL,
-	`Percent` FLOAT NULL)
+	`TeleBallScore` INT NULL)
 Engine = InnoDB;
