@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`WordCloud` (
 	`Team` VARCHAR(10) NULL,
 	`WordID` INT NOT NULL,
 	`WordCount` INT DEFAULT 0,
-	PRIMARY KEY(`MatchScoutingID`,`WordID`))
+	CONSTRAINT `WordCloud_UN` UNIQUE (`EventID`,`MatchID`,`Team`,`WordID`))
 Engine = InnoDB;
