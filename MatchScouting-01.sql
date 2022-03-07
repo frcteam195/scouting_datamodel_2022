@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`MatchScouting` (
 	`ClimbHeight` INT NULL,
 	`ClimbPosition` INT NULL,
 	`SummLaunchPad` INT NULL,
+	`SummShootHub` INT NULL,
 	`SummSortCargo` INT NULL,
 	`SummShootDriving` INT NULL,
 	`SummBrokeDown` INT NULL,
