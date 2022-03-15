@@ -7,7 +7,7 @@
    will be True */
 
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`ComputerTypes` (
-	`ComputerTypeID` INT AUTO_INCREMENT NOT NULL,
+	`ComputerTypeID` INT NULL,
 	`ComputerType` VARCHAR(50) NULL,
 	PRIMARY KEY(`ComputerTypeID`))
 Engine = InnoDB;
