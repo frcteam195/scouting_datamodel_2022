@@ -1,7 +1,7 @@
 /* Match Scouting Level 1 */
 
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`MatchScouting` (
-	`MatchScoutingID` INT AUTO_INCREMENT NOT NULL,
+	`MatchScoutingID` INT AUTO_INCREMENT UNIQUE NOT NULL,
 	`EventID` INT NOT NULL,
 	`MatchID` INT NOT NULL,
 	`ComputerID` INT NULL, 
