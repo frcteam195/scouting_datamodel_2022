@@ -1,16 +1,28 @@
 /* Admin Tables BA - OPR */
 
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`BlueAllianceMatchData` (
-	`Team` VARCHAR(10) NULL,
+    `Match` INT NULL,
+	`Red1` INT NULL,
+    `Red2` INT NULL,
+    `Red3` INT NULL,
+    `Blue1` INT NULL,
+    `Blue2` INT NULL,
+    `Blue3` INT NULL,
 	`RedScore` INT NULL,
 	`BlueScore` INT NULL,
-	`Fouls` INT NULL,
-	`TechFouls` INT NULL,
-	`AutoPoints` INT NULL,
-	`TelePoints` INT NULL,
-	`HagnerPoints` INT NULL,
-	`CargoRanking` INT NULL,
-	`HangerRanking` INT NULL,
-	`OPR` INT NULL,
-PRIMARY KEY(`Team`))
+	`RedFouls` INT NULL,
+    `BlueFouls` INT NULL,
+	`RedTechFouls` INT NULL,
+    `BlueTechFouls` INT NULL,
+	`RedAutoPoints` INT NULL,
+    `BlueAutoPoints` INT NULL,
+	`RedTelePoints` INT NULL,
+    `BlueTelePoints` INT NULL,
+	`RedHangerPoints` INT NULL,
+    `BlueHangerPoints` INT NULL,
+	`RedCargoRanking` INT NULL,
+    `BlueCargoRanking` INT NULL,
+	`RedHangerRanking` INT NULL,
+    `BlueHangerRanking` INT NULL,
+PRIMARY KEY(`Match`))
 Engine = InnoDB;
