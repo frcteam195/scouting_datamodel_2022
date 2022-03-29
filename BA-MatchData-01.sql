@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`BlueAllianceMatchData` (
     `BlueHangerPoints` INT NULL,
 	`RedCargoRanking` INT NULL,
     `BlueCargoRanking` INT NULL,
-	`RedHangerRanking` INT NULL,
-    `BlueHangerRanking` INT NULL,
+	`RedHangarRanking` BOOLEAN NULL,
+    `BlueHangarRanking` BOOLEAN NULL,
 PRIMARY KEY(`MatchNumber`))
 Engine = InnoDB;
