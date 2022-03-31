@@ -20,8 +20,8 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`BlueAllianceMatchData` (
     `BlueTelePoints` INT NULL,
 	`RedHangerPoints` INT NULL,
     `BlueHangerPoints` INT NULL,
-	`RedCargoRanking` INT NULL,
-    `BlueCargoRanking` INT NULL,
+	`RedCargoRanking` BOOLEAN NULL,
+    `BlueCargoRanking` BOOLEAN NULL,
 	`RedHangarRanking` BOOLEAN NULL,
     `BlueHangarRanking` BOOLEAN NULL,
 PRIMARY KEY(`MatchNumber`))
