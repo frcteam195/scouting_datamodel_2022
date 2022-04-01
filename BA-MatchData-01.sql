@@ -2,6 +2,8 @@
 
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`BlueAllianceMatchData` (
     `MatchNumber` INT NOT NULL,
+    `MatchTime` VARCHAR(50) NULL,
+    `ActualTime` VARCHAR(50) NULL,
 	`Red1` INT NULL,
     `Red2` INT NULL,
     `Red3` INT NULL,
