@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`MatchScouting` (
 	`SummDefPlayedAgainst` INT NULL,
 	`SummRanking` INT NULL,
 	`SummSpeed` INT NULL,
-	`SummManeuverability` INT NULL,
+	`SummManuverability` INT NULL,
 	`BAFouls` INT NULL,
 	PRIMARY KEY(`MatchScoutingID`))
 ENGINE = InnoDB;
