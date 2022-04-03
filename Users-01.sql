@@ -6,6 +6,6 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`Users` (
 	`LastName` VARCHAR(50) NULL,
 	`CellPhone` VARCHAR(15) NULL, 
 	`Email` VARCHAR(100) NULL,
-    `Year` INT NULL,
+	`Year` INT NULL,
 	PRIMARY KEY(`UserID`))
 Engine = InnoDB;
