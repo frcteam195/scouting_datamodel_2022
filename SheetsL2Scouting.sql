@@ -1,13 +1,11 @@
 CREATE TABLE IF NOT EXISTS `team195_scouting`.`SheetsL2Scouting` (
-	`TimeStamp` VARCHAR(65534) NOT NULL,
-	`Name` VARCHAR(65534) NOT NULL,
-	`MatchID` INT NOT NULL,
-	`TeamID` INT NULL, 
-	`HumanPlayerScore` INT NULL,
-	`OffensiveQualities` VARCHAR(65534) NULL,
-	`DefenseQualities` INT NULL,
-	`LabelBot` VARCHAR(65534) NULL,
-	`GeneralThoughts` VARCHAR(65534) NULL,
-	`ScoreID` INT NULL,
+	`Name` VARCHAR(2048) NOT NULL,
+	`MatchNo` INT NOT NULL,
+	`TeamNo` INT NULL, 
+	`OffensiveQualities` VARCHAR(2048) NULL,
+	`DefenseQualities` VARCHAR(2048)  NULL,
+	`LabelBot` VARCHAR(2048) NULL,
+	`GeneralThoughts` VARCHAR(2048) NULL,
+	`HarishLove` VARCHAR(128) NULL,
 	PRIMARY KEY(`Name`))
 Engine = InnoDB;
