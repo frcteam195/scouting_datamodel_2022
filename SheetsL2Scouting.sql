@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS `team195_scouting`.`SheetsL2Scouting` (
 	`LabelBot` VARCHAR(2048) NULL,
 	`GeneralThoughts` VARCHAR(2048) NULL,
 	`HarishLove` VARCHAR(128) NULL,
-	PRIMARY KEY(`Name`))
+	PRIMARY KEY(`TeamNo` , `MatchNo`))
 Engine = InnoDB;
